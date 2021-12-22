@@ -23,7 +23,7 @@ spark-env.sh
 ## 环境配置时遇到的问题简述
 
 - spark-shell中有创建好的sc环境，在shell中不需要额外创建
-- mavne中应删除mapreduce相关依赖，否则会发生io.netty.buffer的冲突，参考https://stackoverflow.com/questions/50055656/java-sparkcontext-error-java-lang-nosuchmethoderror-io-netty-buffer-pooledbyte
+- maven中应删除mapreduce相关依赖，否则会发生io.netty.buffer的冲突，参考https://stackoverflow.com/questions/50055656/java-sparkcontext-error-java-lang-nosuchmethoderror-io-netty-buffer-pooledbyte
 - idea configuration中的application连接spark不再好用，应使用spark submit
 - 即使在idea configuration中使用spark submit，仍然提醒sun.nio之类的报错，说明从spark集群外部连接集群还存在一定问题，应该从wsl内部处理
 - 即使在wsl中spark submit 也出现了scala.reflect的没有该方法的报错，检查后发现，对于spark-3.2.0，还是使用scala-2.12.x更好，scala-2.13还是会出问题
